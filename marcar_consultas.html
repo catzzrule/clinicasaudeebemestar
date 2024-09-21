@@ -55,7 +55,7 @@
         <h1>Marcar Consulta</h1>
     </header>
 
-    <form action="confirmacao_consulta.html">
+    <form action="confirmacao_consulta.html" method="GET">
         <label for="nome">Nome Completo</label>
         <input type="text" id="nome" name="nome" required>
 
@@ -79,14 +79,12 @@
             <option value="ginecologia">Ginecologia</option>
             <option value="cardiologia">Cardiologia</option>
             <option value="clinica_geral">Clínica Geral</option>
-            <!-- Adicione mais opções conforme necessário -->
         </select>
 
         <label for="medico">Médico</label>
         <select id="medico" name="medico" required>
             <option value="dra_ana">Dra. Ana</option>
             <option value="dr_joao">Dr. João</option>
-            <!-- Adicione mais opções conforme necessário -->
         </select>
 
         <label for="data">Data da Consulta</label>
@@ -100,6 +98,8 @@
 
     <div style="text-align: center; margin-top: 20px;">
         <button onclick="window.location.href='index.html'">Voltar ao Início</button>
+        <!-- Botão "Minhas Consultas" -->
+        <button onclick="window.location.href='minhas_consultas.html'" style="background-color: #007bff; margin-top: 10px;">Minhas Consultas</button>
     </div>
 </body>
 </html>
