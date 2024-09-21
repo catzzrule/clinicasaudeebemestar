@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados de Exames - Clínica Saúde & Bem-Estar</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .logo {
+            max-width: 200px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        .resultados-exames {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2, h3 {
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        table th {
+            background-color: #f2f2f2;
+        }
+        button {
+            background-color: #4CAF50; /* Verde */
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 5px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .formulario {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin: 5px 0;
+        }
+        input[type="text"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .mensagem-aviso {
+            color: #d9534f; /* Vermelho */
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="./img/logo clinica.png" alt="Logo da Clínica" class="logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="especialidades.html">Especialidades</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="contact.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="resultados-exames">
+        <h2>Resultados de Exames</h2>
+        <div class="formulario">
+            <h3>Buscar Resultados</h3>
+            <form id="buscar-resultados" onsubmit="return buscarResultados(event)">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" required>
+                <label for="cpf">CPF:</label>
+                <input type="text" id="cpf" required>
+                <button type="submit">Buscar Resultados</button>
+            </form>
+            <p id="mensagem-aviso" class="mensagem-aviso" style="display:none;"></p>
+        </div>
+
+        <h3>Exames Concluídos</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Data</th>
+                    <th>Exame</th>
+                    <th>Resultado</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="resultados-concluidos">
+                <tr>
+                    <td>10/09/2024</td>
+                    <td>Exame de Sangue</td>
+                    <td><a href="#" onclick="alert('Download concluído com sucesso!')">Baixar</a></td>
+                    <td>
+                        <button onclick="alert('Resultado recebido com sucesso!')">Receber Resultado</button>
+                        <button onclick="alert('Exame a ser refeito!')">Refazer Exame</button>
+                    </td>
+                </tr>
+                <!-- Adicione mais linhas conforme necessário -->
+            </tbody>
+        </table>
+
+        <h3>Exames Pendentes</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Data</th>
+                    <th>Exame</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody id="resultados-pendentes">
+                <tr>
+                    <td>15/09/2024</td>
+                    <td>Ultrassom</td>
+                    <td>Pendente</td>
+                </tr>
+                <!-- Adicione mais linhas conforme necessário -->
+            </tbody>
+        </table>
+
+        <button onclick="window.location.href='index.html'">Voltar ao Início</button>
+    </section>
+
+    <footer>
+        <p>© 2024 Clínica Saúde & Bem-Estar | Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        function buscarResultados(event) {
+            event.preventDefault();
+            const nome = document.getElementById('nome').value;
+            const cpf = document.getElementById('cpf').value;
+            const aviso = document.getElementById('mensagem-aviso');
+
+            // Simulação de busca de resultados
+            const resultadosDisponiveis = false; // Mude para true para simular resultados disponíveis
+
+            if (!resultadosDisponiveis) {
+                aviso.style.display = 'block';
+                aviso.textContent = 'Exames não disponíveis no momento. Previsão de disponibilidade: até 15/09/2024.';
+            } else {
+                aviso.style.display = 'none';
+                // Lógica para exibir resultados disponíveis
+            }
+        }
+    </script>
+</body>
+</html>

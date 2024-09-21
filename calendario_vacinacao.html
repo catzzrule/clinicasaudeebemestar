@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendar Vacinação - Clínica Saúde & Bem-Estar</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .vacinas {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #333;
+        }
+        .formulario label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        .formulario input,
+        .formulario select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #4CAF50; /* Verde */
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="./img/logo clinica.png" alt="Logo da Clínica" class="logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="especialidades.html">Especialidades</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="contact.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="vacinas">
+        <h2>Agendar Vacinação</h2>
+        
+        <div class="informacoes-campanha">
+            <p><strong>Campanha de Vacinação:</strong> Vacinação Infantil</p>
+            <p><strong>Vacinas Disponíveis:</strong> DTPa, VIP, Meningo C e Hepatite B</p>
+            <p><strong>Público-Alvo:</strong> Crianças e Adolescentes até 17 anos</p>
+            <p><strong>Período:</strong> De 01/10 até 31/10</p>
+        </div>
+        
+        <div class="calendario">
+            <label for="data-vacinacao">Selecione a data:</label>
+            <input type="date" id="data-vacinacao" required>
+        </div>
+
+        <div class="formulario">
+            <label for="nome-vacina">Nome da Vacina:</label>
+            <input type="text" id="nome-vacina" placeholder="Digite o nome da vacina" required>
+            
+            <label for="faixa-etaria">Faixa Etária:</label>
+            <select id="faixa-etaria" required>
+                <option value="recem-nascido">Recém-Nascido</option>
+                <option value="crianca">Criança</option>
+                <option value="adolescente">Adolescente</option>
+                <option value="adulto">Adulto</option>
+            </select>
+        </div>
+
+        <button onclick="agendarVacina()">Agendar Vacinação</button>
+        <button onclick="location.href='index.html'">Voltar ao Início</button>
+    </section>
+
+    <footer>
+        <p>© 2024 Clínica Saúde & Bem-Estar | Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        function agendarVacina() {
+            const data = document.getElementById('data-vacinacao').value;
+            const vacina = document.getElementById('nome-vacina').value;
+            const faixa = document.getElementById('faixa-etaria').value;
+
+            if (data && vacina && faixa) {
+                alert(`Vacinação agendada com sucesso para ${data}. Vacina: ${vacina}.`);
+            } else {
+                alert('Por favor, preencha todos os campos.');
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Clínica Saúde & Bem-Estar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="./img/logo clinica.png" alt="Logo da Clínica" class="logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="especialidades.html">Especialidades</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="contato">
+        <h2>Entre em Contato</h2>
+        <p>Escolha como deseja nos contatar:</p>
+        <p>Telefone: <a href="tel:+55XX XXXX-XXXX">+55 (00) 1234-5678</a></p>
+        <p>Email: <a href="mailto:contato@clinicasaudebemestar.com">contato@clinicasaudebemestar.com</a></p>
+        
+        <button class="green-button" onclick="window.location.href='link_do_chat_aqui.html'">Acessar Chat</button>
+        
+        <div class="acessibilidade">
+            <h3>Acessibilidade</h3>
+            <button class="green-button" onclick="ativarLibras()">Ativar LIBRAS</button>
+            <button class="green-button" onclick="ativarAudioDescricao()">Ativar Áudio Descrição</button>
+        </div>
+    </section>
+
+    <section class="acessibilidade">
+        <h2>Acessibilidade</h2>
+        <p>Estamos buscando implementar conteúdos de áudio e um profissional de LIBRAS para oferecer mais acessibilidade aos nossos pacientes. Fique atento às atualizações!</p>
+
+        <div id="libras" style="display:none;">
+            <h3>Conteúdo em LIBRAS (em breve)</h3>
+            <p>Esta seção será preenchida com vídeos em LIBRAS.</p>
+        </div>
+
+        <div id="audio-descricao" style="display:none;">
+            <h3>Áudio Descrição (em breve)</h3>
+            <p>Esta seção será preenchida com links para áudio descrição.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 Clínica Saúde & Bem-Estar | Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        function ativarLibras() {
+            document.getElementById('libras').style.display = 'block';
+            document.getElementById('audio-descricao').style.display = 'none';
+        }
+
+        function ativarAudioDescricao() {
+            document.getElementById('audio-descricao').style.display = 'block';
+            document.getElementById('libras').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviços - Clínica Saúde & Bem-Estar</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        header img.logo {
+            max-height: 50px;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+        }
+        nav ul li {
+            display: inline;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        section.servicos {
+            margin: 40px 0;
+        }
+        section.servicos h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        section.servicos ul {
+            list-style: none;
+            padding: 0;
+        }
+        section.servicos ul li {
+            background-color: #fff;
+            margin-bottom: 20px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        section.servicos ul li p {
+            margin: 10px 0;
+        }
+        button {
+            background-color: #28a745; /* Verde padrão */
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #218838; /* Verde mais escuro ao passar o mouse */
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="./img/logo clinica.png" alt="Logo da Clínica" class="logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="especialidades.html">Especialidades</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="contact.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="servicos">
+        <h2>Nossos Serviços</h2>
+        <ul>
+            <li>
+                <strong>Central de Atendimento</strong>
+                <p>
+                    Oferecemos suporte e informações sobre nossos serviços.</p>
+                <button onclick="window.location.href='contact.html'">Entre em Contato</button>
+            </li>
+            <li>
+                <strong>Atendimento Domiciliar</strong>
+                <p>
+                    Nossos profissionais vão até você para atendimentos.</p>
+                <button onclick="window.location.href='atendimento_domiciliar.html'">Marcar Visita</button>
+            </li>
+            <li>
+                <strong>Vacinação</strong>
+                <p>
+                    Realizamos vacinas de acordo com o calendário vacinal.</p>
+                <button onclick="window.location.href='calendario_vacinacao.html'">Marcar Vacinação</button>
+            </li>
+            <li>
+                <strong>Exames Laboratoriais</strong>
+                <p>
+                    Oferecemos uma ampla gama de exames para diagnóstico.</p>
+                <button onclick="window.location.href='marcar_exames.html'">Marcar Exame</button>
+            </li>
+            <li>
+                <strong>Aconselhamento Nutricional</strong>
+                <p>
+                    Orientações personalizadas para uma alimentação saudável.</p>
+                <button onclick="window.location.href='marcar_consultas.html'">Marcar Consulta</button>
+            </li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>© 2024 Clínica Saúde & Bem-Estar | Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

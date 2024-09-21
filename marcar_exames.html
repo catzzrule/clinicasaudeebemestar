@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcar Exames - Clínica Saúde & Bem-Estar</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .logo {
+            max-width: 200px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        .marcar-exame {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2, h3 {
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        table th {
+            background-color: #f2f2f2;
+        }
+        button {
+            background-color: #4CAF50; /* Verde */
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .formulario {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin: 5px 0;
+        }
+        select, input[type="date"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="./img/logo clinica.png" alt="Logo da Clínica" class="logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="especialidades.html">Especialidades</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="contact.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="marcar-exame">
+        <h2>Marcar Exame</h2>
+        <div class="formulario">
+            <h3>Selecionar Exame</h3>
+            <label for="tipo-exame">Tipo de Exame:</label>
+            <select id="tipo-exame">
+                <option value="sangue">Exame de Sangue</option>
+                <option value="ultrassom">Ultrassom</option>
+                <option value="raio-x">Raio-X</option>
+                <option value="mamografia">Mamografia</option>
+                <!-- Adicione mais exames conforme necessário -->
+            </select>
+
+            <label for="data-exame">Data:</label>
+            <input type="date" id="data-exame" required>
+
+            <button onclick="alert('Exame agendado com sucesso!')">Agendar Exame</button>
+        </div>
+
+        <h3>Exames Agendados</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Data</th>
+                    <th>Exame</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>20/09/2024</td>
+                    <td>Exame de Sangue</td>
+                    <td>
+                        <button onclick="alert('Exame desmarcado com sucesso')">Desmarcar</button>
+                        <button onclick="window.location.href='marcar_exames.html'">Remarcar</button>
+                    </td>
+                </tr>
+                <!-- Adicione mais linhas conforme necessário -->
+            </tbody>
+        </table>
+
+        <button onclick="window.location.href='resultados_exames.html'">Resultados de Exames</button>
+        <button onclick="window.location.href='index.html'">Voltar ao Início</button>
+    </section>
+
+    <footer>
+        <p>© 2024 Clínica Saúde & Bem-Estar | Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

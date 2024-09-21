@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcar Consultas - Clínica Saúde & Bem-Estar</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        form {
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 0 auto;
+            border-radius: 5px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #28a745; /* Verde padrão */
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            margin: 5px 0;
+            width: 100%;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #218838; /* Verde mais escuro ao passar o mouse */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Marcar Consulta</h1>
+    </header>
+
+    <form action="confirmacao_consulta.html">
+        <label for="nome">Nome Completo</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="idade">Idade</label>
+        <input type="number" id="idade" name="idade" required>
+
+        <label for="cpf">CPF</label>
+        <input type="text" id="cpf" name="cpf" required>
+
+        <label for="plano_saude">Tem plano de saúde?</label>
+        <select id="plano_saude" name="plano_saude" required>
+            <option value="sim">Sim</option>
+            <option value="nao">Não</option>
+        </select>
+
+        <label for="numero_carteirinha">Número da Carteirinha (se tiver)</label>
+        <input type="text" id="numero_carteirinha" name="numero_carteirinha">
+
+        <label for="especialidade">Especialidade</label>
+        <select id="especialidade" name="especialidade" required>
+            <option value="ginecologia">Ginecologia</option>
+            <option value="cardiologia">Cardiologia</option>
+            <option value="clinica_geral">Clínica Geral</option>
+            <!-- Adicione mais opções conforme necessário -->
+        </select>
+
+        <label for="medico">Médico</label>
+        <select id="medico" name="medico" required>
+            <option value="dra_ana">Dra. Ana</option>
+            <option value="dr_joao">Dr. João</option>
+            <!-- Adicione mais opções conforme necessário -->
+        </select>
+
+        <label for="data">Data da Consulta</label>
+        <input type="date" id="data" name="data" required>
+
+        <label for="hora">Hora da Consulta</label>
+        <input type="time" id="hora" name="hora" min="07:00" max="22:00" required>
+
+        <button type="submit">Marcar Consulta</button>
+    </form>
+
+    <div style="text-align: center; margin-top: 20px;">
+        <button onclick="window.location.href='index.html'">Voltar ao Início</button>
+    </div>
+</body>
+</html>

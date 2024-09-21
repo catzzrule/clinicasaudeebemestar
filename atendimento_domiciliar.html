@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atendimento Domiciliar - Clínica Saúde & Bem-Estar</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilos para padronizar os botões verdes */
+        .btn-verde {
+            background-color: #4CAF50; /* Verde */
+            color: white; /* Texto branco */
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin: 5px;
+        }
+
+        .btn-verde:hover {
+            background-color: #45a049; /* Verde mais escuro no hover */
+        }
+
+        /* Estilo para a tabela */
+        .tabela-domiciliar {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .tabela-domiciliar th, .tabela-domiciliar td {
+            padding: 15px;
+            text-align: left;
+        }
+
+        .tabela-domiciliar th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="./img/logo clinica.png" alt="Logo da Clínica" class="logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="especialidades.html">Especialidades</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="contact.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="atendimento-domiciliar">
+        <h2>Atendimento Domiciliar</h2>
+        <p>Selecione um dos profissionais disponíveis para agendar seu atendimento domiciliar. Horários disponíveis de 10:30 às 21:30.</p>
+        
+        <!-- Tabela com profissionais -->
+        <table border="1" cellpadding="10" cellspacing="0" class="tabela-domiciliar">
+            <tr>
+                <th>Profissional</th>
+                <th>Especialidade</th>
+                <th>Dias Disponíveis</th>
+                <th>Horário</th>
+                <th>Ação</th>
+            </tr>
+            <tr>
+                <td>Dr. João Silva</td>
+                <td>Clínico Geral</td>
+                <td>Segunda e Quarta</td>
+                <td>10:30 - 16:30</td>
+                <td>
+                    <button class="btn-verde" onclick="window.location.href='marcar_atendimento.html'">Marcar Atendimento</button>
+                    <button class="btn-verde" onclick="alert('Detalhes: Dr. João Silva, Clínico Geral com 10 anos de experiência. Realizamos atendimento em sua residência, acompanhado por um(a) enfermeiro(a) especializado, garantindo um serviço de qualidade e atenção personalizada.')">Ver Detalhes</button>
+                    <button class="btn-verde" onclick="alert('Próximos horários disponíveis: 22/09 às 10:30, 24/09 às 14:00')">Ver Disponibilidades</button>
+                </td>
+            </tr>
+            <tr>
+                <td>Enf. Maria Oliveira</td>
+                <td>Enfermagem Domiciliar</td>
+                <td>Terça e Quinta</td>
+                <td>13:30 - 19:30</td>
+                <td>
+                    <button class="btn-verde" onclick="window.location.href='marcar_atendimento.html'">Marcar Atendimento</button>
+                    <button class="btn-verde" onclick="alert('Detalhes: Enf. Maria Oliveira, Especialista em cuidados domiciliares.Realizamos atendimento em sua residência, acompanhado por um(a) enfermeiro(a) especializado, garantindo um serviço de qualidade e atenção personalizada.')">Ver Detalhes</button>
+                    <button class="btn-verde" onclick="alert('Próximos horários disponíveis: 25/09 às 13:30, 27/09 às 16:00')">Ver Disponibilidades</button>
+                </td>
+            </tr>
+            <tr>
+                <td>Dr. Paulo Mendes</td>
+                <td>Geriatra</td>
+                <td>Segunda, Quarta e Sexta</td>
+                <td>16:30 - 21:30</td>
+                <td>
+                    <button class="btn-verde" onclick="window.location.href='marcar_atendimento.html'">Marcar Atendimento</button>
+                    <button class="btn-verde" onclick="alert('Detalhes: Dr. Paulo Mendes, Geriatra com 8 anos de experiência.Realizamos atendimento em sua residência, acompanhado por um(a) enfermeiro(a) especializado, garantindo um serviço de qualidade e atenção personalizada.')">Ver Detalhes</button>
+                    <button class="btn-verde" onclick="alert('Próximos horários disponíveis: 22/09 às 17:00, 23/09 às 18:30')">Ver Disponibilidades</button>
+                </td>
+            </tr>
+            <tr>
+                <td>Enf. Juliana Costa</td>
+                <td>Enfermagem Geral</td>
+                <td>Terça e Quinta</td>
+                <td>10:30 - 16:30</td>
+                <td>
+                    <button class="btn-verde" onclick="window.location.href='marcar_atendimento.html'">Marcar Atendimento</button>
+                    <button class="btn-verde" onclick="alert('Detalhes: Enf. Juliana Costa, especializada em atendimentos domiciliares.Realizamos atendimento em sua residência, acompanhado por um(a) enfermeiro(a) especializado, garantindo um serviço de qualidade e atenção personalizada.')">Ver Detalhes</button>
+                    <button class="btn-verde" onclick="alert('Próximos horários disponíveis: 26/09 às 11:00, 28/09 às 14:00')">Ver Disponibilidades</button>
+                </td>
+            </tr>
+        </table>
+
+        <!-- Botões gerais -->
+        <div class="botoes-gerais">
+            <button onclick="window.location.href='index.html'" class="btn-verde">Voltar ao Início</button>
+            <button onclick="window.location.href='minhas_consultas.html'" class="btn-verde">Minhas Consultas</button>
+            <button onclick="window.location.href='contact.html'" class="btn-verde">Entrar em Contato</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 Clínica Saúde & Bem-Estar | Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

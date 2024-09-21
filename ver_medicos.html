@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ver Médicos - Clínica Saúde & Bem-Estar</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(227, 227, 251);
+        }
+
+        header {
+            background-color: #a0ceb2;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+            color: #333;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        .especialidade {
+            background-color: #e0f7fa;
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .especialidade h2 {
+            margin: 0 0 10px;
+            cursor: pointer;
+            color: #00695c;
+        }
+
+        .horario {
+            display: none; /* Oculta inicialmente */
+            padding: 10px;
+            border-top: 1px solid #ccc;
+            margin-top: 10px;
+        }
+
+        .medicos {
+            margin-top: 10px;
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .medicos li {
+            margin-bottom: 5px;
+        }
+
+        .voltar-home {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 15px;
+            background-color: #00695c;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            width: 150px;
+        }
+
+        .voltar-home:hover {
+            background-color: #004d40;
+        }
+    </style>
+    <script>
+        function toggleHorario(id) {
+            const horario = document.getElementById(id);
+            horario.style.display = horario.style.display === "none" ? "block" : "none";
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Ver Médicos</h1>
+    </header>
+
+    <section>
+        <div class="especialidade">
+            <h2 onclick="toggleHorario('pediatria')">Pediatria</h2>
+            <div id="pediatria" class="horario">
+                <h3>Plantão da Manhã (10h00 - 16h00)</h3>
+                <ul class="medicos">
+                    <li>Dr. Ana - Sala 101</li>
+                    <li>Dr. Carlos - Sala 102</li>
+                    <li>Dr. Beatriz - Sala 103</li>
+                    <li>Dr. João - Sala 104</li>
+                    <li>Dr. Maria - Sala 105</li>
+                    <li>Dr. Luiza - Sala 106</li>
+                    <li>Dr. Ricardo - Sala 107</li>
+                    <li>Dr. Fernanda - Sala 108</li>
+                    <li>Dr. Felipe - Sala 109</li>
+                    <li>Dr. Paula - Sala 110</li>
+                </ul>
+                <h3>Plantão da Tarde (16h00 - 22h00)</h3>
+                <ul class="medicos">
+                    <li>Dr. Carlos - Sala 201</li>
+                    <li>Dr. Beatriz - Sala 202</li>
+                    <li>Dr. João - Sala 203</li>
+                    <li>Dr. Maria - Sala 204</li>
+                    <li>Dr. Luiza - Sala 205</li>
+                    <li>Dr. Ricardo - Sala 206</li>
+                    <li>Dr. Fernanda - Sala 207</li>
+                    <li>Dr. Felipe - Sala 208</li>
+                    <li>Dr. Paula - Sala 209</li>
+                    <li>Dr. Ana - Sala 210</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="especialidade">
+            <h2 onclick="toggleHorario('ginecologia')">Ginecologia</h2>
+            <div id="ginecologia" class="horario">
+                <h3>Plantão da Manhã (10h00 - 16h00)</h3>
+                <ul class="medicos">
+                    <li>Dr. Julia - Sala 301</li>
+                    <li>Dr. Rafael - Sala 302</li>
+                    <li>Dr. Camila - Sala 303</li>
+                    <li>Dr. Thiago - Sala 304</li>
+                    <li>Dr. Vanessa - Sala 305</li>
+                    <li>Dr. Igor - Sala 306</li>
+                    <li>Dr. Luana - Sala 307</li>
+                    <li>Dr. Felipe - Sala 308</li>
+                    <li>Dr. Renata - Sala 309</li>
+                    <li>Dr. Eduardo - Sala 310</li>
+                </ul>
+                <h3>Plantão da Tarde (16h00 - 22h00)</h3>
+                <ul class="medicos">
+                    <li>Dr. Rafael - Sala 401</li>
+                    <li>Dr. Camila - Sala 402</li>
+                    <li>Dr. Thiago - Sala 403</li>
+                    <li>Dr. Vanessa - Sala 404</li>
+                    <li>Dr. Igor - Sala 405</li>
+                    <li>Dr. Luana - Sala 406</li>
+                    <li>Dr. Felipe - Sala 407</li>
+                    <li>Dr. Renata - Sala 408</li>
+                    <li>Dr. Eduardo - Sala 409</li>
+                    <li>Dr. Julia - Sala 410</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="especialidade">
+            <h2 onclick="toggleHorario('clinica_geral')">Clínica Geral</h2>
+            <div id="clinica_geral" class="horario">
+                <h3>Plantão da Manhã (10h00 - 16h00)</h3>
+                <ul class="medicos">
+                    <li>Dr. Alan - Sala 501</li>
+                    <li>Dr. Bruno - Sala 502</li>
+                    <li>Dr. Carlos - Sala 503</li>
+                    <li>Dr. Daniela - Sala 504</li>
+                    <li>Dr. Emanuelle - Sala 505</li>
+                    <li>Dr. Felipe - Sala 506</li>
+                    <li>Dr. Gustavo - Sala 507</li>
+                    <li>Dr. Heloisa - Sala 508</li>
+                    <li>Dr. Igor - Sala 509</li>
+                    <li>Dr. Julia - Sala 510</li>
+                </ul>
+                <h3>Plantão da Tarde (16h00 - 22h00)</h3>
+                <ul class="medicos">
+                    <li>Dr. Bruno - Sala 601</li>
+                    <li>Dr. Carlos - Sala 602</li>
+                    <li>Dr. Daniela - Sala 603</li>
+                    <li>Dr. Emanuelle - Sala 604</li>
+                    <li>Dr. Felipe - Sala 605</li>
+                    <li>Dr. Gustavo - Sala 606</li>
+                    <li>Dr. Heloisa - Sala 607</li>
+                    <li>Dr. Igor - Sala 608</li>
+                    <li>Dr. Julia - Sala 609</li>
+                    <li>Dr. Alan - Sala 610</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="especialidade">
+            <h2 onclick="toggleHorario('cardiologia')">Cardiologia</h2>
+            <div id="cardiologia" class="horario">
+                <h3>Plantão da Manhã (10h00 - 16h00)</h3>
+                <ul class="medicos">
+                    <li>Dr. Antonio - Sala 701</li>
+                    <li>Dr. Beatriz - Sala 702</li>
+                    <li>Dr. Carlos - Sala 703</li>
+                    <li>Dr. Diana - Sala 704</li>
+                    <li>Dr. Eduardo - Sala 705</li>
+                    <li>Dr. Fernanda - Sala 706</li>
+                    <li>Dr. Gustavo - Sala 707</li>
+                    <li>Dr. Helena - Sala 708</li>
+                    <li>Dr. Igor - Sala 709</li>
+                    <li>Dr. Julia - Sala 710</li>
+                </ul>
+                <h3>Plantão da Tarde (16h00 - 22h00)</h3>
+                <ul class="medicos">
+                    <li>Dr. Beatriz - Sala 801</li>
+                    <li>Dr. Carlos - Sala 802</li>
+                    <li>Dr. Diana - Sala 803</li>
+                    <li>Dr. Eduardo - Sala 804</li>
+                    <li>Dr. Fernanda - Sala 805</li>
+                    <li>Dr. Gustavo - Sala 806</li>
+                    <li>Dr. Helena - Sala 807</li>
+                    <li>Dr. Igor - Sala 808</li>
+                    <li>Dr. Julia - Sala 809</li>
+                    <li>Dr. Antonio - Sala 810</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="especialidade">
+            <h2 onclick="toggleHorario('dermatologia')">Dermatologia</h2>
+            <div id="dermatologia" class="horario">
+                <h3>Plantão da Manhã (10h00 - 16h00)</h3>
+                <ul class="medicos">
+                    <li>Dr. Laura - Sala 901</li>
+                    <li>Dr. Miguel - Sala 902</li>
+                    <li>Dr. Nanda - Sala 903</li>
+                    <li>Dr. Otávio - Sala 904</li>
+                    <li>Dr. Paula - Sala 905</li>
+                    <li>Dr. Ricardo - Sala 906</li>
+                    <li>Dr. Sarah - Sala 907</li>
+                    <li>Dr. Tiago - Sala 908</li>
+                    <li>Dr. Ugo - Sala 909</li>
+                    <li>Dr. Vanessa - Sala 910</li>
+                </ul>
+                <h3>Plantão da Tarde (16h00 - 22h00)</h3>
+                <ul class="medicos">
+                    <li>Dr. Miguel - Sala 1001</li>
+                    <li>Dr. Nanda - Sala 1002</li>
+                    <li>Dr. Otávio - Sala 1003</li>
+                    <li>Dr. Paula - Sala 1004</li>
+                    <li>Dr. Ricardo - Sala 1005</li>
+                    <li>Dr. Sarah - Sala 1006</li>
+                    <li>Dr. Tiago - Sala 1007</li>
+                    <li>Dr. Ugo - Sala 1008</li>
+                    <li>Dr. Vanessa - Sala 1009</li>
+                    <li>Dr. Laura - Sala 1010</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="especialidade">
+            <h2 onclick="toggleHorario('nutricao')">Nutrição</h2>
+            <div id="nutricao" class="horario">
+                <h3>Plantão da Manhã (10h00 - 16h00)</h3>
+                <ul class="medicos">
+                    <li>Dr. Felipe - Sala 1101</li>
+                    <li>Dr. Ana - Sala 1102</li>
+                    <li>Dr. Camila - Sala 1103</li>
+                    <li>Dr. Bruno - Sala 1104</li>
+                    <li>Dr. Clara - Sala 1105</li>
+                    <li>Dr. Daniel - Sala 1106</li>
+                    <li>Dr. Ellen - Sala 1107</li>
+                    <li>Dr. Fernanda - Sala 1108</li>
+                    <li>Dr. Gabriel - Sala 1109</li>
+                    <li>Dr. Helena - Sala 1110</li>
+                </ul>
+                <h3>Plantão da Tarde (16h00 - 22h00)</h3>
+                <ul class="medicos">
+                    <li>Dr. Ana - Sala 1201</li>
+                    <li>Dr. Camila - Sala 1202</li>
+                    <li>Dr. Bruno - Sala 1203</li>
+                    <li>Dr. Clara - Sala 1204</li>
+                    <li>Dr. Daniel - Sala 1205</li>
+                    <li>Dr. Ellen - Sala 1206</li>
+                    <li>Dr. Fernanda - Sala 1207</li>
+                    <li>Dr. Gabriel - Sala 1208</li>
+                    <li>Dr. Helena - Sala 1209</li>
+                    <li>Dr. Felipe - Sala 1210</li>
+                </ul>
+            </div>
+        </div>
+
+        <a href="index.html" class="voltar-home">Voltar para Home</a>
+    </section>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcar Atendimento Domiciliar - Clínica Saúde & Bem-Estar</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .tabela-servicos {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        .tabela-servicos th, .tabela-servicos td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+        .tabela-servicos th {
+            background-color: #e0f7fa;
+        }
+        .botao-verde {
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .botao-verde:hover {
+            background-color: #45a049;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="./img/logo clinica.png" alt="Logo da Clínica" class="logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="especialidades.html">Especialidades</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="contact.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="atendimento-domiciliar">
+        <h2>Marcar Atendimento Domiciliar</h2>
+        <p>Selecione o profissional e a data do atendimento:</p>
+
+        <table class="tabela-servicos">
+            <thead>
+                <tr>
+                    <th>Profissional</th>
+                    <th>Data</th>
+                    <th>Horário Disponível</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Dra. Ana</td>
+                    <td>20/09/2024</td>
+                    <td>10:30 - 12:00</td>
+                    <td>
+                        <button class="botao-verde" onclick="marcarConsulta('Dra. Ana', '20/09/2024', '10:30')">Marcar</button>
+                        <button class="botao-verde" onclick="remarcarConsulta('Dra. Ana')">Remarcar</button>
+                        <button class="botao-verde" onclick="desmarcarConsulta('Dra. Ana')">Desmarcar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Enf. João</td>
+                    <td>20/09/2024</td>
+                    <td>14:00 - 16:00</td>
+                    <td>
+                        <button class="botao-verde" onclick="marcarConsulta('Enf. João', '20/09/2024', '14:00')">Marcar</button>
+                        <button class="botao-verde" onclick="remarcarConsulta('Enf. João')">Remarcar</button>
+                        <button class="botao-verde" onclick="desmarcarConsulta('Enf. João')">Desmarcar</button>
+                    </td>
+                </tr>
+                <!-- Adicione mais profissionais conforme necessário -->
+            </tbody>
+        </table>
+    </section>
+
+    <footer>
+        <p>© 2024 Clínica Saúde & Bem-Estar | Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        function marcarConsulta(profissional, data, horario) {
+            alert(`Consulta marcada com sucesso com ${profissional} para ${data} às ${horario}.`);
+        }
+
+        function remarcarConsulta(profissional) {
+            window.location.href = 'atendimento_domiciliar.html'; // Redireciona para a página de atendimento domiciliar
+        }
+
+        function desmarcarConsulta(profissional) {
+            alert(`Consulta desmarcada com sucesso com ${profissional}.`);
+        }
+    </script>
+</body>
+</html>
+s

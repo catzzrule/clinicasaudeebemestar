@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minhas Consultas - Clínica Saúde & Bem-Estar</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function mostrarMensagem(tipo) {
+            let mensagem = "";
+            if (tipo === 'desmarcar') {
+                mensagem = "Consulta desmarcada com sucesso!";
+            } else if (tipo === 'confirmar') {
+                mensagem = "Presença confirmada com sucesso!";
+            }
+            alert(mensagem);
+        }
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            padding: 12px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .botoes {
+            text-align: center;
+        }
+        button {
+            background-color: #28a745; /* Verde padrão */
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            margin: 5px;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #218838; /* Verde mais escuro ao passar o mouse */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Minhas Consultas</h1>
+    </header>
+
+    <section>
+        <table>
+            <thead>
+                <tr>
+                    <th>Data</th>
+                    <th>Especialidade</th>
+                    <th>Médico</th>
+                    <th>Hora</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>20/04</td>
+                    <td>Ginecologia</td>
+                    <td>Dra. Ana</td>
+                    <td>10h00</td>
+                    <td>
+                        <button onclick="mostrarMensagem('confirmar')">Confirmar Presença</button>
+                        <button onclick="mostrarMensagem('desmarcar')">Desmarcar</button>
+                        <button onclick="window.location.href='marcar_consultas.html'">Remarcar</button>
+                    </td>
+                </tr>
+                <!-- Adicione mais linhas conforme necessário -->
+            </tbody>
+        </table>
+
+        <div class="botoes">
+            <button onclick="window.location.href='marcar_consultas.html'">Marcar Nova Consulta</button>
+            <button onclick="window.location.href='index.html'">Voltar ao Início</button>
+            <button onclick="window.location.href='contact.html'">Entrar em Contato</button>
+        </div>
+    </section>
+</body>
+</html>
