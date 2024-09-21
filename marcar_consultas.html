@@ -36,7 +36,7 @@
             border-radius: 5px;
         }
         button {
-            background-color: #28a745; /* Verde padrão */
+            background-color: #28a745;
             color: white;
             border: none;
             padding: 10px 15px;
@@ -46,16 +46,32 @@
             border-radius: 5px;
         }
         button:hover {
-            background-color: #218838; /* Verde mais escuro ao passar o mouse */
+            background-color: #218838;
+        }
+        #confirmation-message {
+            text-align: center;
+            margin-top: 20px;
+            color: green;
+            font-weight: bold;
+            display: none;
         }
     </style>
+    <script>
+        function marcarConsulta(event) {
+            event.preventDefault(); // Impede o comportamento padrão do formulário
+            const nome = document.getElementById('nome').value;
+            const confirmacao = document.getElementById('confirmation-message');
+            confirmacao.textContent = `Consulta marcada com sucesso para ${nome}!`;
+            confirmacao.style.display = 'block';
+        }
+    </script>
 </head>
 <body>
     <header>
         <h1>Marcar Consulta</h1>
     </header>
 
-    <form action="confirmacao_consulta.html" method="GET">
+    <form id="consultaForm" onsubmit="marcarConsulta(event)">
         <label for="nome">Nome Completo</label>
         <input type="text" id="nome" name="nome" required>
 
@@ -96,9 +112,10 @@
         <button type="submit">Marcar Consulta</button>
     </form>
 
+    <div id="confirmation-message">Consulta marcada com sucesso!</div>
+
     <div style="text-align: center; margin-top: 20px;">
         <button onclick="window.location.href='index.html'">Voltar ao Início</button>
-        <!-- Botão "Minhas Consultas" -->
         <button onclick="window.location.href='minhas_consultas.html'" style="background-color: #007bff; margin-top: 10px;">Minhas Consultas</button>
     </div>
 </body>
